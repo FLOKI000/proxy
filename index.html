@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
     <title>فروشگاه من</title>
 
     <style>
@@ -12,15 +14,15 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
             overflow: hidden;
             background: #ffffff;
-            font-family: Tahoma, Arial, sans-serif;
         }
 
-        .website {
+        #store {
             position: fixed;
             inset: 0;
             width: 100%;
@@ -29,17 +31,43 @@
             display: block;
             background: #ffffff;
         }
+
+        #error {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            color: #222222;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 2;
+        }
     </style>
 </head>
+
 <body>
 
     <iframe
-        class="website"
+        id="store"
         src="https://www.snapp-good.ir/"
         title="فروشگاه"
         allow="clipboard-read; clipboard-write"
         referrerpolicy="strict-origin-when-cross-origin">
     </iframe>
+
+    <div id="error">
+        <div>
+            <h3>امکان نمایش فروشگاه وجود ندارد</h3>
+            <p>
+                ممکن است سایت مقصد نمایش داخل iframe را مسدود کرده باشد.
+                برای نمایش آن روی دامنه خودتان، به راهکار سازگار با
+                تنظیمات و مجوزهای سایت مقصد نیاز دارید.
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
